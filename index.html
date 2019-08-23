@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Simple TODO tracker
+        </title>
+        <link rel="stylesheet" type="text/css" href="./styles.css">
+    </head>
+    <body>
+        <header class="top-bar">
+           <span>TODO Application</span>
+        </header >
+        <div class="wrapper">
+            <div class="navigation-panel">
+                <ul>
+                    <li class="active" id="tab-todo">My Todo</li>
+                    <li id="tab-profile">Profile</li>
+                    <li id="tab-settings">Settings</li>
+                </ul>
+            </div>
+            <div class="right-container">
+                <div class="title-bar">
+                    <h1 id="title">Todo List</h1>
+                    <hr>
+                </div>
+                <div id = "message">Add some items to create the list.</div>
+                <div id = "tab-controls">
+                    <div class="add-bar">
+                            <input type="text" id="inp-todo"/> 
+                            <button id="btn-add">Add</button>
+                    </div>
+                    <div class="todo-content">
+                        <table width="100%" id="table-todo" >
+                            <tr>
+                                <th>Name</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <q>Everyone is putting their copyright sign why not me?</q>
+            <span>&copy;bbc - (Bibek BC)</span>
+        </footer>
+        <script type="text/javascript" src="./scripts.js"></script>
+    </body>
+</html>

@@ -1,0 +1,146 @@
+*{
+    padding:0px;
+    margin:0px;
+    font-family: sans-serif, serif;
+}
+
+.hide{
+    display: none;
+}
+
+.active{
+    background-color: whitesmoke;
+    border: 1px solid white;
+    color: white;
+}
+
+.top-bar{
+    display:block;
+    color: white;
+    height: 100px;
+    position: relative;
+}
+
+.top-bar span{
+    display: block;
+    position: absolute;
+    top: 35%;
+    margin-left: 20px;
+}
+
+header{
+    font-size: 2em;
+    background-color: lightslategray;
+    width: 100%;
+}
+
+footer{
+    color: lightblue;
+    background-color: darkslategrey;
+    text-align: center;
+    line-height: 100px;
+    clear: both;
+}
+
+.wrapper{
+    display:block;
+}
+
+.navigation-panel{
+    display: block;
+    width: 20%;
+    height: 500px;
+    background-color: #333333;
+    float: left;
+}
+
+.navigation-panel ul li{
+    background-color: grey;
+    list-style: none;
+    padding: 5px 15px 5px 15px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.navigation-panel ul li:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+
+.right-container{
+    height: 500px;
+    width: 80%;
+    float: right;
+    background-color: white;
+}
+
+#todo-controls{
+    margin-top: 10px;
+    background-color: red;
+}
+
+.add-bar{
+    margin-top: 20px;
+    margin-left: 300px;
+}
+
+.todo-content{
+    display: block;
+    width: 80%;
+    margin-top: 20px;
+    margin-left: 10%;
+    text-align: left;
+}
+
+input{
+    font-size: 2em;
+    padding: 0px 5px 0px 5px;
+    border: 0px;
+    color: whitesmoke;
+    background-color: darkgrey;
+}
+
+input:focus{
+   outline: none;
+   background-color: #333333;
+}
+
+
+button{
+    font-size: 2em;
+    color: white;
+    background: darkslategrey;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 0px;
+    margin-left: 0px;
+}
+
+button:hover{
+    background-color: #333333;
+}
+
+button:focus{
+    outline: none;
+}
+
+hr{
+    margin: 10px;
+}
+
+h1{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+table th:first-child{
+    width: 80%;
+}
+
+table td:first-child{
+    width: 80%;
+}
+
+#message{
+    margin-left: 20px;
+}
