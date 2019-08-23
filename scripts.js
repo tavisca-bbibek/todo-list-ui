@@ -7,6 +7,59 @@ let todoInput = document.getElementById('inp-todo');
 let todoTable = document.getElementById('table-todo');
 
 let todoControls = document.getElementById('tab-controls');
+let todoList = document.getElementById('todo-list');
+
+
+addBtn.addEventListener('click', _ => {
+    let row = document.createElement('tr');
+
+    let todo = readInput();
+    let td = document.createElement('td');
+    td.textContent = todo;
+    row.appendChild(td);
+    row.appendChild(getEdit());
+    row.appendChild(getDelete());
+
+    todoTable.appendChild(row);
+
+    let option = document.createElement('option');
+    todoList.appendChild(option);
+});
+
+
+function readInput(){
+    if(todoInput.value)
+        return todoInput.value;
+}
+
+function getEdit(){
+    let edit = document.createElement('td');
+    edit.textContent = 'Edit';
+    edit.addEventListener('click', _ => {
+        let todoName = edit.parentElement.firstChild;
+        if(edit.textContent == 'Edit'){
+            todoName.textContent = '';
+            let inp = document.createElement('input');
+            todoName.appendChild(inp);
+            edit.textContent = 'Save';
+        }else{
+            let inpVal = todoName.firstChild.value;
+            todoName.textContent = inpVal;
+            edit.textContent = 'Edit';
+        }
+    });
+    return edit;
+}
+
+function getDelete(){
+    let del = document.createElement('td');
+    del.textContent = 'Delete';
+    del.addEventListener('click', _ => {
+         todoTable.removeChild(del.parentElement);
+    });
+    return del;
+}
+
 
 todoTab.addEventListener('click', _ => {
     if(!isActive(todoTab)){
