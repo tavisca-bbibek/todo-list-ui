@@ -85,6 +85,8 @@ footer{
     margin-top: 20px;
     margin-left: 10%;
     text-align: left;
+    overflow-y: scroll;
+    height: 300px;
 }
 
 input{
