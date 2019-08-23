@@ -9,41 +9,48 @@ let todoTable = document.getElementById('table-todo');
 let todoControls = document.getElementById('tab-controls');
 let todoList = document.getElementById('todo-list');
 
-
-addBtn.addEventListener('click', _ => {
+todoInput.addEventListener('change', addTodo);
+addBtn.addEventListener('click', addTodo);
+function addTodo(){
     let row = document.createElement('tr');
 
     let todo = readInput();
-    let td = document.createElement('td');
-    td.textContent = todo;
-    row.appendChild(td);
-    row.appendChild(getEdit());
-    row.appendChild(getDelete());
+    if(todo){
+        let td = document.createElement('td');
+        td.textContent = todo;
+        row.appendChild(td);
+        row.appendChild(getEdit());
+        row.appendChild(getDelete());
 
-    todoTable.appendChild(row);
+        todoTable.appendChild(row);
 
-    let option = document.createElement('option');
-    todoList.appendChild(option);
-});
-
+        let option = document.createElement('option');
+        option.textContent = todo;
+        todoList.appendChild(option);
+        console.log(todoList);
+    }
+}
 
 function readInput(){
-    if(todoInput.value)
-        return todoInput.value;
+    let contents = todoInput.value;
+    todoInput.value = '';
+    todoInput.focus();
+    return contents;
 }
 
 function getEdit(){
     let edit = document.createElement('td');
     edit.textContent = 'Edit';
-    edit.addEventListener('click', _ => {
+    let editToggle = function(){
         let todoName = edit.parentElement.firstChild;
         if(edit.textContent == 'Edit'){
             let content = todoName.textContent;
             todoName.textContent = '';
             let inp = document.createElement('input');
             inp.value = content;
-            inp.classList.add('edit-box');
             inp.focus();
+            inp.addEventListener('change', editToggle);
+            inp.classList.add('edit-box');
             todoName.appendChild(inp);
             edit.textContent = 'Save';
         }else{
@@ -51,7 +58,8 @@ function getEdit(){
             todoName.textContent = content;
             edit.textContent = 'Edit';
         }
-    });
+    }
+    edit.addEventListener('click', editToggle);
     return edit;
 }
 

@@ -4,13 +4,8 @@
     font-family: sans-serif, serif;
 }
 
-.hide{
-    display: none;
-}
-
-.active{
-    background-color: whitesmoke;
-    border: 1px solid white;
+.disabled{
+    background: darkgrey;
     color: white;
 }
 
@@ -55,16 +50,16 @@ footer{
 }
 
 .navigation-panel ul li{
-    background-color: grey;
     list-style: none;
-    padding: 5px 15px 5px 15px;
-    margin: 20px;
-    border-radius: 5px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+    size: 1em;
+    color: grey;
 }
 
 .navigation-panel ul li:hover{
-    background-color: whitesmoke;
-    color: black;
+    color: white;
 }
 
 .right-container{
@@ -100,7 +95,8 @@ input{
 #inp-todo{
     font-size: 2em;
     padding: 0px 5px 0px 5px;
-    background-color: darkgrey;
+    border: 1px solid darkgrey;
+    color: #333333;
 }
 
 input:focus{
@@ -108,11 +104,9 @@ input:focus{
 }
 
 .edit-box{
-    border: 1px solid #333333;
-    line-height: 20px;
     color: black;
-    padding-left: 10px;
-    padding-right: 10px;
+    height: 40px;
+    width: 100%;
 }
 
 button{
@@ -150,18 +144,31 @@ table td:first-child{
     width: 80%;
 }
 
+table td:nth-child(2):hover, table td:nth-child(3):hover{
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .2);
+    background: darkgrey;
+    color: white;
+    border: darkgrey;
+    cursor: grab;
+}
+
 table tbody tr{
-    height: 30px;
+    height: 40px;
 }
 
 table tbody tr:nth-child(odd){
-    background:lightcyan;
-}
-
-table tbody tr:nth-child(even){
-    background: lightblue;
+    background:whitesmoke;
 }
 
 #message{
     margin-left: 20px;
+}
+
+.hide{
+    display: none;
+}
+
+.active{
+    background-color: white;
+    color: black !important;
 }
