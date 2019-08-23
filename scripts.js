@@ -38,13 +38,17 @@ function getEdit(){
     edit.addEventListener('click', _ => {
         let todoName = edit.parentElement.firstChild;
         if(edit.textContent == 'Edit'){
+            let content = todoName.textContent;
             todoName.textContent = '';
             let inp = document.createElement('input');
+            inp.value = content;
+            inp.classList.add('edit-box');
+            inp.focus();
             todoName.appendChild(inp);
             edit.textContent = 'Save';
         }else{
-            let inpVal = todoName.firstChild.value;
-            todoName.textContent = inpVal;
+            let content = todoName.firstChild.value;
+            todoName.textContent = content;
             edit.textContent = 'Edit';
         }
     });

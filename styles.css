@@ -93,18 +93,27 @@ footer{
 }
 
 input{
-    font-size: 2em;
-    padding: 0px 5px 0px 5px;
     border: 0px;
     color: whitesmoke;
+}
+
+#inp-todo{
+    font-size: 2em;
+    padding: 0px 5px 0px 5px;
     background-color: darkgrey;
 }
 
 input:focus{
    outline: none;
-   background-color: #333333;
 }
 
+.edit-box{
+    border: 1px solid #333333;
+    line-height: 20px;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 button{
     font-size: 2em;
@@ -139,6 +148,18 @@ table th:first-child{
 
 table td:first-child{
     width: 80%;
+}
+
+table tbody tr{
+    height: 30px;
+}
+
+table tbody tr:nth-child(odd){
+    background:lightcyan;
+}
+
+table tbody tr:nth-child(even){
+    background: lightblue;
 }
 
 #message{
