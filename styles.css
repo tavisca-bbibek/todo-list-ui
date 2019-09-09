@@ -60,6 +60,7 @@ footer{
 
 .navigation-panel ul li:hover{
     color: white;
+    cursor: pointer;
 }
 
 .right-container{
@@ -91,7 +92,6 @@ footer{
 
 input{
     border: 0px;
-    color: whitesmoke;
 }
 
 #inp-todo{
@@ -106,10 +106,7 @@ input:focus{
 }
 
 .edit-box{
-    color: black;
-    border: 1px solid darkgrey;
-    height: 40px;
-    width: 100%;
+    font-size: 1em;
 }
 
 button{
@@ -174,4 +171,25 @@ table tbody tr:nth-child(odd){
 .active{
     background-color: white;
     color: black !important;
+}
+
+.todo-title{
+    font-size: 2em;
+    color: grey;
+    padding-left: 20px;
+}
+
+.todo-description{
+    padding-left: 20px;
+}
+
+.btn-edit{
+    float: right;
+    background-color: antiquewhite;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btin-edit:hover{
+    background-color: lightblue;
 }
