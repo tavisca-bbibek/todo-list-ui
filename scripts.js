@@ -96,12 +96,13 @@ function getTodoElement(todoItem){
     let descriptionDiv = document.createElement('div');
     descriptionDiv.appendChild(todoDescription);
     descriptionDiv.appendChild(editDescription);
+    descriptionDiv.classList.add('div-description');
     
     todoTitle.innerText = todoItem.title;
     todoDescription.innerText = todoItem.description;
     
     todoElement.appendChild(titleDiv);
-    todoElement.appendChild(document.createElement('hr'))
+    todoElement.appendChild(document.createElement('br'))
     todoElement.appendChild(descriptionDiv);
     
     return todoElement;
@@ -215,6 +216,7 @@ function postTodo(){
     
     xhr.setRequestHeader('Content-Type', 'application/json')
     let requestBody = {title: readTodoInput()};
+    console.log(requestBody);
     xhr.send(JSON.stringify(requestBody));
 }
 

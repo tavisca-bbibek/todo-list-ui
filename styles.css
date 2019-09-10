@@ -107,6 +107,9 @@ input:focus{
 
 .edit-box{
     font-size: 1em;
+    border-bottom: 2px solid darkgrey;
+    box-sizing: border-box;
+    width: 100%
 }
 
 button{
@@ -146,20 +149,11 @@ table td:first-child{
 
 table td:nth-child(2):hover, table td:nth-child(3):hover{
     box-shadow: 0px 0px 2px rgba(0, 0, 0, .2);
-    background: darkgrey;
+    background: red;
     color: white;
     border: darkgrey;
     cursor: grab;
 }
-
-table tbody tr{
-    height: 40px;
-}
-
-table tbody tr:nth-child(odd){
-    background:whitesmoke;
-}
-
 #message{
     margin-left: 20px;
 }
@@ -176,15 +170,19 @@ table tbody tr:nth-child(odd){
 .todo-title{
     font-size: 2em;
     color: grey;
-    padding-left: 20px;
+    padding-right: 50px;
 }
 
 .todo-description{
-    padding-left: 20px;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+    line-height: 2em;
 }
 
 .btn-edit{
-    float: right;
+    position: absolute;
+    right: 0px;
+    top: 0px;
     background-color: antiquewhite;
     padding: 10px;
     cursor: pointer;
@@ -192,4 +190,12 @@ table tbody tr:nth-child(odd){
 
 .btin-edit:hover{
     background-color: lightblue;
+}
+
+div{
+    position: relative;
+}
+
+.div-description{
+    margin-bottom: 50px;
 }
